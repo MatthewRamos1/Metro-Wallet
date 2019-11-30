@@ -9,9 +9,9 @@
 import Foundation
 
 protocol CardData {
-    var name: String
-    var expiration: Date
-    var cardType: CardType
+    var name: String { get set }
+    var expiration: Date { get set } //check if get or get set is more applicable
+    var cardType: CardType { get set }
 }
 
 enum CardType {
@@ -42,6 +42,14 @@ class BalanceCardData: CardData {
 class UnlimitedCardData: CardData {
     var name: String
     var expiration: Date
+    var unlimitedExpiration: Date
+    var cardType: CardType
     
-        
+    init(name: String, cardType: CardType, expiration: Date, unlimitedExpiration: Date) {
+        self.name = name
+        self.cardType = cardType
+        self.unlimitedExpiration = unlimitedExpiration
+        self.expiration = expiration
+    }
+
 }
