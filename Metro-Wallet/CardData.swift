@@ -37,6 +37,12 @@ class BalanceCardData: CardData {
         self.decrementValue = decrementValue
     }
     
+    static let balanceCards = [
+        BalanceCardData(name: String(), cardType: CardType.regular, balance: Double() , expiration: Date(), decrementValue: 2.75),
+        BalanceCardData(name: String(), cardType: CardType.reducedFare, balance: Double(), expiration: Date(), decrementValue: 1.35)
+    ]
+    
+    
 }
 
 class UnlimitedCardData: CardData {
@@ -44,13 +50,22 @@ class UnlimitedCardData: CardData {
     var expiration: Date
     var unlimitedExpiration: Date
     var cardType: CardType
+    var numberOfRides: Double
     
-    init(name: String, cardType: CardType, expiration: Date, unlimitedExpiration: Date) {
+    init(name: String, cardType: CardType, expiration: Date, unlimitedExpiration: Date, numberOfRides: Double) {
         self.name = name
         self.cardType = cardType
         self.unlimitedExpiration = unlimitedExpiration
         self.expiration = expiration
+        self.numberOfRides = numberOfRides
     }
-
+    
+    static let unlimitedCards = [
+        UnlimitedCardData(name: String(), cardType: CardType.student, expiration: Date(), unlimitedExpiration: Date(), numberOfRides: 3),
+        UnlimitedCardData(name: String(), cardType: CardType.sevenDay, expiration: Date(), unlimitedExpiration: Date(), numberOfRides: Double.infinity),
+        UnlimitedCardData(name: String(), cardType: CardType.thirtyDay, expiration: Date(), unlimitedExpiration: Date(), numberOfRides: Double.infinity)
+    ]
+    
+    
 }
 
