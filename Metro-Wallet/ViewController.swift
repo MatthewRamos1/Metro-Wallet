@@ -22,7 +22,9 @@ class ViewController: UIViewController {
 
     @IBAction func cardSwiped(_ sender: UISwipeGestureRecognizer) {
         if cardSwipeRecognizer.state == .ended {
-            metroCardImage.image = UIImage(named: "Unknown3")
+            UIView.animate(withDuration: 0.5, animations: {
+                self.metroCardImage.frame.origin.y += 150
+                    }, completion: nil)
     }
     }
     
