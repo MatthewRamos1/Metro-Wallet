@@ -69,13 +69,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="metrocard" translatesAutoresizingMaskIntoConstraints="NO" id="4tD-cT-rMS">
-                                <rect key="frame" x="113" y="298" width="189" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metrocard" translatesAutoresizingMaskIntoConstraints="NO" id="4tD-cT-rMS">
+                                <rect key="frame" x="112.5" y="298" width="189" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4tD-cT-rMS" firstAttribute="centerY" secondItem="YXv-eZ-DBM" secondAttribute="centerY" id="6zZ-Ge-NfY"/>
+                            <constraint firstItem="4tD-cT-rMS" firstAttribute="centerX" secondItem="YXv-eZ-DBM" secondAttribute="centerX" id="I2m-6y-CXG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3XW-yg-iwG"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tFR-AN-Cc2" appends="YES" id="FCL-uL-9ol"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="jeo-rt-EgI">
                         <barButtonItem key="rightBarButtonItem" title="Card Wallet" id="WkV-MO-QN9">
@@ -85,10 +92,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cardSwipeRecognizer" destination="tFR-AN-Cc2" id="xp0-Kg-4BA"/>
                         <outlet property="metroCardImage" destination="4tD-cT-rMS" id="bpQ-w1-qoL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPk-oT-bPG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="tFR-AN-Cc2">
+                    <connections>
+                        <action selector="cardSwiped:" destination="Gq4-1x-bVq" id="oqM-v2-D1C"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2835" y="787"/>
         </scene>

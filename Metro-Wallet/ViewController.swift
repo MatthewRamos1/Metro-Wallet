@@ -11,13 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var metroCardImage: UIImageView!
+    @IBOutlet var cardSwipeRecognizer: UISwipeGestureRecognizer!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cardSwipeRecognizer.direction = .down
         
     }
 
-
+    @IBAction func cardSwiped(_ sender: UISwipeGestureRecognizer) {
+        if cardSwipeRecognizer.state == .ended {
+            metroCardImage.image = UIImage(named: "Unknown3")
+    }
+    }
+    
 }
 
