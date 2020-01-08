@@ -19,14 +19,24 @@ class ViewController: UIViewController {
         cardSwipeRecognizer.direction = .down
         
     }
-
+    
     @IBAction func cardSwiped(_ sender: UISwipeGestureRecognizer) {
         if cardSwipeRecognizer.state == .ended {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.metroCardImage.frame.origin.y += 150
-                    }, completion: nil)
-    }
+            UIView.animate(withDuration: 0.1, animations: {
+                self.metroCardImage.frame.origin.y += 420
+            }, completion: nil)
+        }
+        UIView.animate(withDuration: 0.1, animations: {
+            self.metroCardImage.frame.origin.y -= 420
+        }, completion: nil)
     }
     
+    @IBAction func testButtonPressed(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.metroCardImage.frame.origin.y += 420
+        }, completion: nil)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.metroCardImage.frame.origin.y -= 420
+        }, completion: nil)
+    }
 }
-
