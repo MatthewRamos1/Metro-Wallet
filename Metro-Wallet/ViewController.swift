@@ -25,10 +25,10 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.1, animations: {
                 self.metroCardImage.frame.origin.y += 420
             }, completion: nil)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.metroCardImage.frame.origin.y -= 420
+            }, completion: nil)
         }
-        UIView.animate(withDuration: 0.1, animations: {
-            self.metroCardImage.frame.origin.y -= 420
-        }, completion: nil)
     }
     
     @IBAction func testButtonPressed(_ sender: UIButton) {
