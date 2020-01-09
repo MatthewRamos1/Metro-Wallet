@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cardSwipeRecognizer.direction = .down
+        cardSwipeRecognizer?.direction = .down
+        //find out why optionial is neccessary
         
     }
     
