@@ -10,7 +10,7 @@
         <!--Card View Controller-->
         <scene sceneID="hcb-AA-EZb">
             <objects>
-                <viewController id="VOf-kG-L45" customClass="CardViewController" customModule="CollectionView_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VOf-kG-L45" customClass="CardViewController" customModule="Metro_Wallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJi-8G-fhB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
