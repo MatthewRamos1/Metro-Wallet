@@ -9,6 +9,11 @@
 import Foundation
 
 enum CardType {
+    case limited
+    case unlimited
+}
+
+enum CardSubtype {
     case regular
     case reducedFare
     case student
@@ -18,16 +23,16 @@ enum CardType {
 
 class MetroCard {
     var name: String
-    var cardType: CardType
+    var cardSubtype: CardSubtype
     var balance: Double?
     var expiration: Date
     var decrementValue: Double?
     var unlimitedExpiration: Date?
     var numberOfRides: Int?
     
-    init(name: String, cardType: CardType, balance: Double?, expiration: Date, decrementValue: Double?, unlimitedExpiration: Date?, numberOfRides: Int?) {
+    init(name: String, cardSubtype: CardSubtype, balance: Double?, expiration: Date, decrementValue: Double?, unlimitedExpiration: Date?, numberOfRides: Int?) {
         self.name = name
-        self.cardType = cardType
+        self.cardSubtype = cardSubtype
         self.balance = balance
         self.expiration = expiration
         self.decrementValue = decrementValue
@@ -36,11 +41,11 @@ class MetroCard {
     }
     
     static var balanceCards = [
-        MetroCard(name: "Regular", cardType: CardType.regular, balance: 0 , expiration: Date(), decrementValue: 2.75, unlimitedExpiration: nil, numberOfRides: nil),
-        MetroCard(name: "ReducedFare", cardType: CardType.reducedFare, balance: 0, expiration: Date(), decrementValue: 1.35, unlimitedExpiration: nil, numberOfRides: nil),
-        MetroCard(name: "Student", cardType: CardType.student, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: nil, numberOfRides: 3),
-        MetroCard(name: "SevenDay", cardType: CardType.sevenDay, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: addSevenDays(), numberOfRides: nil),
-        MetroCard(name: "ThirtyDay", cardType: CardType.thirtyDay, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: addThirtyDays(), numberOfRides: nil)
+        MetroCard(name: "Regular", cardSubtype: CardSubtype.regular, balance: 0 , expiration: Date(), decrementValue: 2.75, unlimitedExpiration: nil, numberOfRides: nil),
+        MetroCard(name: "ReducedFare", cardSubtype: CardSubtype.reducedFare, balance: 0, expiration: Date(), decrementValue: 1.35, unlimitedExpiration: nil, numberOfRides: nil),
+        MetroCard(name: "Student", cardSubtype: CardSubtype.student, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: nil, numberOfRides: 3),
+        MetroCard(name: "SevenDay", cardSubtype: CardSubtype.sevenDay, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: addSevenDays(), numberOfRides: nil),
+        MetroCard(name: "ThirtyDay", cardSubtype: CardSubtype.thirtyDay, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: addThirtyDays(), numberOfRides: nil)
     ]
     
     static func addThirtyDays() -> Date? {
