@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="vnf-jj-7te" customClass="MTACardImageCell" customModule="CollectionView_Practice" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="vnf-jj-7te" customClass="MTACardImageCell" customModule="Metro_Wallet" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="271" height="377"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RyE-Za-fs3">
@@ -24,6 +24,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.90194982290000003" green="0.90195506810000003" blue="0.9019688964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstItem="cQ9-bd-LPh" firstAttribute="centerY" secondItem="RyE-Za-fs3" secondAttribute="centerY" id="5ih-Zh-pLe"/>
                     <constraint firstItem="cQ9-bd-LPh" firstAttribute="centerX" secondItem="RyE-Za-fs3" secondAttribute="centerX" id="SXz-Ms-8bZ"/>

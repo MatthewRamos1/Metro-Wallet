@@ -35,7 +35,7 @@ class MetroCard {
         self.numberOfRides = numberOfRides
     }
     
-    static let balanceCards = [
+    static var balanceCards = [
         MetroCard(name: "Regular", cardType: CardType.regular, balance: 0 , expiration: Date(), decrementValue: 2.75, unlimitedExpiration: nil, numberOfRides: nil),
         MetroCard(name: "ReducedFare", cardType: CardType.reducedFare, balance: 0, expiration: Date(), decrementValue: 1.35, unlimitedExpiration: nil, numberOfRides: nil),
         MetroCard(name: "Student", cardType: CardType.student, balance: nil, expiration: Date(), decrementValue: nil, unlimitedExpiration: nil, numberOfRides: 3),
