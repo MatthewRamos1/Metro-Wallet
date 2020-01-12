@@ -10,10 +10,12 @@
 		0C5ADC0A2393030300B62F25 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5ADC092393030300B62F25 /* CardData.swift */; };
 		0C5CABE12390639B00498DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CABE02390639B00498DFC /* AppDelegate.swift */; };
 		0C5CABE32390639B00498DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CABE22390639B00498DFC /* SceneDelegate.swift */; };
-		0C5CABE52390639B00498DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CABE42390639B00498DFC /* ViewController.swift */; };
+		0C5CABE52390639B00498DFC /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CABE42390639B00498DFC /* CardViewController.swift */; };
 		0C5CABE82390639B00498DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5CABE62390639B00498DFC /* Main.storyboard */; };
 		0C5CABEA2390639F00498DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5CABE92390639F00498DFC /* Assets.xcassets */; };
 		0C5CABED2390639F00498DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5CABEB2390639F00498DFC /* LaunchScreen.storyboard */; };
+		3E9CDD7C23CAB1BA00D7A331 /* MTACardImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9CDD7B23CAB1BA00D7A331 /* MTACardImageCell.xib */; };
+		3E9CDD7E23CAB1DA00D7A331 /* MTACardImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CDD7D23CAB1DA00D7A331 /* MTACardImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,13 @@
 		0C5CABDD2390639B00498DFC /* Metro-Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro-Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5CABE02390639B00498DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C5CABE22390639B00498DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C5CABE42390639B00498DFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C5CABE42390639B00498DFC /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		0C5CABE72390639B00498DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C5CABE92390639F00498DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C5CABEC2390639F00498DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C5CABEE2390639F00498DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E9CDD7B23CAB1BA00D7A331 /* MTACardImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTACardImageCell.xib; sourceTree = "<group>"; };
+		3E9CDD7D23CAB1DA00D7A331 /* MTACardImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTACardImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +65,10 @@
 				0C5ADC092393030300B62F25 /* CardData.swift */,
 				0C5CABE02390639B00498DFC /* AppDelegate.swift */,
 				0C5CABE22390639B00498DFC /* SceneDelegate.swift */,
-				0C5CABE42390639B00498DFC /* ViewController.swift */,
+				0C5CABE42390639B00498DFC /* CardViewController.swift */,
 				0C5CABE62390639B00498DFC /* Main.storyboard */,
+				3E9CDD7D23CAB1DA00D7A331 /* MTACardImageCell.swift */,
+				3E9CDD7B23CAB1BA00D7A331 /* MTACardImageCell.xib */,
 				0C5CABE92390639F00498DFC /* Assets.xcassets */,
 				0C5CABEB2390639F00498DFC /* LaunchScreen.storyboard */,
 				0C5CABEE2390639F00498DFC /* Info.plist */,
@@ -128,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9CDD7C23CAB1BA00D7A331 /* MTACardImageCell.xib in Resources */,
 				0C5CABED2390639F00498DFC /* LaunchScreen.storyboard in Resources */,
 				0C5CABEA2390639F00498DFC /* Assets.xcassets in Resources */,
 				0C5CABE82390639B00498DFC /* Main.storyboard in Resources */,
@@ -141,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C5CABE52390639B00498DFC /* ViewController.swift in Sources */,
+				0C5CABE52390639B00498DFC /* CardViewController.swift in Sources */,
+				3E9CDD7E23CAB1DA00D7A331 /* MTACardImageCell.swift in Sources */,
 				0C5ADC0A2393030300B62F25 /* CardData.swift in Sources */,
 				0C5CABE12390639B00498DFC /* AppDelegate.swift in Sources */,
 				0C5CABE32390639B00498DFC /* SceneDelegate.swift in Sources */,

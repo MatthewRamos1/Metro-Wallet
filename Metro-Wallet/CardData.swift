@@ -38,10 +38,11 @@ class BalanceCardData: CardData {
     }
     
     static let balanceCards = [
-        BalanceCardData(name: String(), cardType: CardType.regular, balance: Double() , expiration: Date(), decrementValue: 2.75),
-        BalanceCardData(name: String(), cardType: CardType.reducedFare, balance: Double(), expiration: Date(), decrementValue: 1.35)
+        BalanceCardData(name: "Regular", cardType: CardType.regular, balance: 0 , expiration: Date(), decrementValue: 2.75),
+        BalanceCardData(name: "ReducedFare", cardType: CardType.reducedFare, balance: 0, expiration: Date(), decrementValue: 1.35)
     ]
     
+    static let allBalanceCards: [BalanceCardData] = [BalanceCardData(name: "Regular", cardType: CardType.regular, balance: 0, expiration: Date(), decrementValue: 2.75), BalanceCardData(name: "ReducedFare", cardType: CardType.reducedFare, balance: 0, expiration: Date(), decrementValue: 0), BalanceCardData(name: "Student", cardType: CardType.student, balance: 0, expiration: Date(), decrementValue: 0)]
     
 }
 
@@ -51,6 +52,20 @@ class UnlimitedCardData: CardData {
     var unlimitedExpiration: Date
     var cardType: CardType
     var numberOfRides: Double
+    
+    static func addThirtyDays() -> Date? {
+            var timeValue = DateComponents()
+            timeValue.day = 30
+            let thirtyDayExpirationDate = Calendar.current.date(byAdding: timeValue, to: Date())
+            return thirtyDayExpirationDate
+        }
+    
+        static func addSevenDays() -> Date? {
+            var timeValue = DateComponents()
+            timeValue.day = 7
+            let sevenDayExpirationDate = Calendar.current.date(byAdding: timeValue, to: Date())
+            return sevenDayExpirationDate
+        }
     
     init(name: String, cardType: CardType, expiration: Date, unlimitedExpiration: Date, numberOfRides: Double) {
         self.name = name
@@ -66,6 +81,5 @@ class UnlimitedCardData: CardData {
         UnlimitedCardData(name: String(), cardType: CardType.thirtyDay, expiration: Date(), unlimitedExpiration: Date(), numberOfRides: Double.infinity)
     ]
     
-    
+    static let allUnlimitedCards: [UnlimitedCardData] = [UnlimitedCardData(name: "Student", cardType: CardType.student, expiration: Date(), unlimitedExpiration: Date(), numberOfRides: 3), UnlimitedCardData(name: "SevenDay", cardType: CardType.sevenDay, expiration: Date(), unlimitedExpiration: addSevenDays() ?? Date(), numberOfRides: Double.infinity), UnlimitedCardData(name: "ThirtyDay", cardType: CardType.thirtyDay, expiration: Date(), unlimitedExpiration: addThirtyDays() ?? Date(), numberOfRides: Double.infinity)]
 }
-
