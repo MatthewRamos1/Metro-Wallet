@@ -33,16 +33,6 @@ class CardViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func testButtonPressed(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.1, animations: {
-            self.collectionView.frame.origin.y += 420
-        }, completion: nil)
-        UIView.animate(withDuration: 0.5, animations: {
-            self.collectionView.frame.origin.y -= 420
-        }, completion: nil)
-        
-    }
 }
 
 extension CardViewController: UICollectionViewDataSource    {
