@@ -63,17 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				0C5ADC092393030300B62F25 /* CardData.swift */,
-				0C5CABE02390639B00498DFC /* AppDelegate.swift */,
-				0C5CABE22390639B00498DFC /* SceneDelegate.swift */,
 				0C5CABE42390639B00498DFC /* CardViewController.swift */,
-				0C5CABE62390639B00498DFC /* Main.storyboard */,
-				3E9CDD7D23CAB1DA00D7A331 /* MTACardImageCell.swift */,
-				3E9CDD7B23CAB1BA00D7A331 /* MTACardImageCell.xib */,
-				0C5CABE92390639F00498DFC /* Assets.xcassets */,
-				0C5CABEB2390639F00498DFC /* LaunchScreen.storyboard */,
+				3E9CDD7F23CACB4A00D7A331 /* Views */,
+				3E9CDD8023CACCE000D7A331 /* Supporting Files */,
 				0C5CABEE2390639F00498DFC /* Info.plist */,
 			);
 			path = "Metro-Wallet";
+			sourceTree = "<group>";
+		};
+		3E9CDD7F23CACB4A00D7A331 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E9CDD7B23CAB1BA00D7A331 /* MTACardImageCell.xib */,
+				3E9CDD7D23CAB1DA00D7A331 /* MTACardImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E9CDD8023CACCE000D7A331 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C5CABE02390639B00498DFC /* AppDelegate.swift */,
+				0C5CABE22390639B00498DFC /* SceneDelegate.swift */,
+				0C5CABE62390639B00498DFC /* Main.storyboard */,
+				0C5CABE92390639F00498DFC /* Assets.xcassets */,
+				0C5CABEB2390639F00498DFC /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
